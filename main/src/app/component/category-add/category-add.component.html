@@ -1,0 +1,44 @@
+
+<body>
+  <header>
+      <div class="logo">Logo Trang Web</div>
+  </header>
+  <div class="container">
+      <aside class="sidebar">
+          <ul>
+            <li><a [routerLink]="['/product-list']" routerLinkActive="router-link-active">Sản phẩm</a></li>
+            <li><a [routerLink]="['/category-list']" routerLinkActive="router-link-active" >Danh mục</a></li>
+              <li><a href="#nguoi-dung">Người dùng</a></li>
+              <li><a href="#cai-dat">Cài đặt</a></li>
+          </ul>
+      </aside>
+      <main class="content">
+        <div class="col-md-10 m-auto" id="category-add">
+          <form (ngSubmit)="onSubmit()" [formGroup]="categoryForm">
+            <div class="card">
+              <div class="card-header">
+                <h3>Add new category</h3>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" name="name" id="name" formControlName="name" [(ngModel)]="category.name"
+                    class="form-control" placeholder="Tên danh mục cần thêm..." aria-describedby="namehelpId">
+                  <small *ngIf="!categoryForm.get('name')?.valid && categoryForm.get('name')?.touched" id="namehelpId"
+                    class="text-muted">
+                    Tên danh mục phải có ít nhất 6 ký tự
+                  </small>
+                  <br>
+                  <div class="form-group">
+                    <button class="btn btn-primary">Thêm danh mục</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </main>
+  </div>
+</body>
+

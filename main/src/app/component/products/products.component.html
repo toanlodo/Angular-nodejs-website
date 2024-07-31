@@ -1,0 +1,110 @@
+<div class="products-container">
+  <div class="products-container-main">
+    <div class="products-container-left">
+      <div class="products-container-categories">
+        <div class="products-categories-title">
+          <h2>Danh mục sản phẩm</h2>
+        </div>
+        <div class="products-categories-content">
+          <div class="products-categories-content-text"*ngFor="let category of categories">
+            <ul >
+              <li>
+                <a [routerLink]="['/products']" [queryParams]="{categoryId: category._id}"  routerLinkActive="router-link-active" >
+                  <h3>{{category.name}}</h3>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="products-categories-content-img">
+            <img src="../assets/images/categoriesimg.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="products-container-right">
+      <div class="products-box">
+
+        <!-- PRODUCTS - BOX -->
+        <div class="products-box-title">
+          <h1>OUR PRODUCTS</h1>
+        </div>
+        <div class="products-box-sort">
+          <div class="dropdown">
+            <button class="dropbtn" (click)="toggleDropdown()">{{sortLabel}}</button>
+            <div class="dropdown-content" [ngClass]="{'show': dropdownOpen}">
+              <a href="#" (click)="sortHighToLow($event)">Giá cao - thấp</a>
+              <a href="#" (click)="sortLowToHigh($event)">Giá thấp - cao</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-box-main" id="newproducts" >
+          <div class="product-box" *ngFor="let product of products">
+            <div class="product-box-index" >
+              <!-- products -->
+              <div class="product-box-area" >
+                <a [routerLink]="['/product-detail/' + product._id]"   routerLinkActive="router-link-active" >
+                  <div class="product-img">
+                    <img [src]="product.image" alt="">
+                  </div>
+                </a>
+                <div class="product-title">
+                  <h3>
+                    {{product.name}}
+                  </h3>
+                </div>
+                <div class="product-price">
+                  <h4>
+                    {{product.price | currency:'VND':'symbol'}}
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- POLICY -->
+<div class="policy">
+  <div class="policy-box">
+    <div class="policy-logo">
+      <img src="../assets/images/policylogo.svg" alt="">
+    </div>
+    <div class="policy-main">
+      <div class="policy-main-box">
+        <div class="policy-main-logo">
+          <img src="../assets/images/icons8-shield-64.png" alt="">
+        </div>
+        <div class="policy-main-text">
+          <h3>Chính sách bảo hành</h3>
+        </div>
+      </div>
+      <div class="policy-main-box">
+        <div class="policy-main-logo">
+          <img src="../assets/images/icons8-eye-24.png" alt="">
+        </div>
+        <div class="policy-main-text">
+          <h3>Khám mắt miễn phí</h3>
+        </div>
+      </div>
+      <div class="policy-main-box">
+        <div class="policy-main-logo">
+          <img src="../assets/images/icons8-refresh-30.png" alt="">
+        </div>
+        <div class="policy-main-text">
+          <h3>Thu cũ đổi mới</h3>
+        </div>
+      </div>
+      <div class="policy-main-box">
+        <div class="policy-main-logo">
+          <img src="../assets/images/icons8-clean-24.png" alt="">
+        </div>
+        <div class="policy-main-text">
+          <h3>Vệ sinh kính mắt</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

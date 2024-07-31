@@ -1,0 +1,1763 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+select,
+textarea {
+    background-color: transparent;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 120px;
+}
+
+
+/* HEADER */
+header {
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Hiển thị độ bóng nhẹ */
+    z-index: 1000000;
+    /* Chọn một giá trị z-index lớn hơn để đảm bảo header hiển thị trên các phần tử khác */
+    top: 0;
+    transition: top 0.3s ease-in-out;
+    /* Hiệu ứng chuyển động khi cuộn */
+}
+
+.header-container {
+    color: black;
+    width: 1380px;
+    margin: 0 auto;
+    height: 85px;
+    padding: 20px 0px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1.5fr;
+}
+
+.header-logo {
+    width: 58px;
+}
+
+.header-logo img {
+    height: 50px;
+    width: 150px;
+
+}
+
+nav {
+    width: 630px;
+}
+
+.nav-box {
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-box a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.header-control {
+    width: 100%;
+}
+
+.header-control-box {
+    padding: 8px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-search {
+    display: flex;
+}
+
+.header-search input {
+    width: 180px;
+    border: 0px;
+    background-color: #5c5c5c33;
+    height: 28px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.header-login-hello{
+  font-size: 1rem;
+  margin-top: 8px;
+  font-weight: 800;
+}
+.header-login-hello span{
+  color: red;
+}
+.header-login img {
+    width: 30px;
+    height: 30px;
+}
+
+.header-search img {
+    width: 30px;
+    height: 30px;
+}
+
+.header-cart img {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: end;
+}
+
+.welcome {
+    background-color: black;
+    height: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+/* body */
+
+/* BANNER */
+.banner-box {
+    margin: 0 auto;
+    margin-top: 120px;
+}
+
+.banner-box img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+
+}
+
+.morebanner {
+
+    width: 1380px;
+    margin: 0 auto;
+}
+
+.morebanner-box {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 10px;
+}
+
+.morebanner-left img {
+    border-radius: 20px;
+}
+
+.morebanner-middle img {
+    border-radius: 20px;
+    height: 430px;
+}
+
+.morebanner-right img {
+    border-radius: 20px;
+    height: 430px;
+}
+
+/* PRODUCT */
+.product {
+    border-radius: 35px;
+    width: 1380px;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: #9fe4df;
+}
+
+.product-box-header {
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
+    background-color: #81C8C2;
+    height: 100px;
+    color: white;
+
+}
+
+.product-box-title {
+    font-weight: 800;
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 20px 0px 0px 30px;
+}
+
+.product-box-details {
+    padding: 10px 0px 0px 30px;
+    font-size: 1rem;
+}
+
+.product-box-index {
+    padding: 20px;
+}
+
+.product-box-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.product-box-area {
+    border-radius: 20px;
+    background-color: white;
+    height: 350px;
+}
+
+.product-img img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 250px;
+}
+
+.product-title h3 {
+    display: flex;
+    justify-content: center;
+    font-weight: 800;
+    margin-top: 15px;
+    text-align: center;
+    height: 40px;
+    padding: 5px;
+}
+
+.product-price {
+    display: flex;
+    margin-top: 8px;
+    justify-content: center;
+}
+
+/* BLOG */
+.blog {
+    width: 1380px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.blog-title {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.blog-title img {
+    width: 400px;
+    height: 91px;
+    filter: grayscale(30%);
+    display: block;
+}
+
+.blog-title h3,
+.blog-title h2 {
+    color: black;
+    margin: 0;
+    display: flex;
+}
+
+
+.blog-title h3 {
+    z-index: 1;
+    font-size: 1.2rem;
+    margin-bottom: 0px;
+}
+
+.blog-title h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    z-index: 2;
+    margin-top: 10px;
+}
+
+.blog-main {
+    width: 1380px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.blog-img img {
+    border-radius: 40px;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.blog-details {
+    padding-top: 100px;
+}
+
+.blog-details-img {
+    background-color: #9fe4df;
+    border-radius: 150px;
+    width: 100px;
+    height: 100px;
+    margin-left: 40%;
+}
+
+.blog-details-img img {
+    padding: 30px;
+    width: 125px;
+    height: 91px;
+    object-fit: cover;
+}
+
+.blog-details-title h1 {
+    display: flex;
+    justify-content: center;
+    color: #449b95;
+    font-weight: 800;
+    font-size: 2rem;
+    padding: 10px 0px 20px 0px;
+}
+
+.blog-details-title h2 {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 10px 0px 20px 0px;
+}
+
+.blog-details-title a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.blog-details-title a:hover {
+    color: #449b95;
+    transition: 0.7s ease;
+}
+
+/* BLOG - HE THONG CUA HANG */
+
+.blog-main2 {
+    width: 1380px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.blog-img2 img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+}
+
+/* BLOG - VU TRU TRUYEN THONG */
+.blog-box3 {
+    display: grid;
+    grid-template-columns: 3.1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.blog-details3 {
+    line-height: 30px;
+    font-size: 1.3rem;
+    color: rgb(70, 70, 70);
+}
+
+.blog-middle {
+    background-color: #339AF0;
+    height: 200px;
+    padding: 10px;
+    width: 250px;
+    margin-top: 200px;
+    transition: 0.3s ease;
+}
+
+.blog-middle:hover {
+    transform: scale(1.12);
+}
+
+.blog-middle-logo {
+    padding-bottom: 90px;
+}
+
+.blog-middle-text h3 {
+    font-weight: 800;
+    color: white
+}
+
+.blog-middle-text p {
+    color: white;
+    font-size: 0.8rem;
+    padding-top: 5px;
+}
+
+.blog-box3 {
+    margin-bottom: 50px;
+}
+
+.blog-box3 a {
+    text-decoration: none;
+}
+
+.blog-end1 {
+    padding: 10px;
+    background: linear-gradient(45.58deg, #EA8B5F 1.89%, #DA5F5B 21.75%, #C4449E 41.02%, #A43592 98.68%) !important;
+    height: 200px;
+    width: 250px;
+    margin-left: 30px;
+    margin-top: 80px;
+    margin-bottom: 70px;
+    transition: 0.3s ease;
+
+}
+
+.blog-end1:hover {
+    transform: scale(1.12);
+}
+
+.blog-end-logo {
+    padding-bottom: 90px;
+}
+
+.blog-end-text h3 {
+    font-weight: 800;
+    color: white
+}
+
+.blog-end-text p {
+    color: white;
+    font-size: 0.8rem;
+    padding-top: 5px;
+}
+
+.blog-end2 {
+    transition: 0.3s ease;
+    width: 250px;
+    background-image: url(../assets/images/blogendbackground.jpg);
+}
+
+.blog-end2 {
+    padding: 10px;
+}
+
+.blog-end2:hover {
+    transform: scale(1.12);
+}
+
+/* POLICY */
+.policy {
+
+    background-color: #f8f8f8;
+    height: 100px;
+}
+
+.policy-box {
+    padding-top: 35px;
+    width: 1380px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.policy-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.policy-main-box {
+    display: flex;
+}
+
+.policy-main-text {
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+/* FOOTER */
+.footer-main {
+    width: 100%;
+    color: rgb(0, 0, 0);
+    margin-top: 20px;
+}
+
+.footer-main-box {
+    margin: auto;
+    max-width: 1380px;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 1fr;
+}
+
+.footer-title h3 {
+    color: rgb(0, 0, 0);
+}
+
+
+.footer-title {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.footer-text {
+    line-height: 1.3rem;
+    padding-top: 20px;
+    width: 240px;
+    color: rgb(0, 0, 0);
+}
+
+.footer-text-another p {
+    padding-bottom: 15px;
+}
+
+.footer-text span {
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: rgb(0, 0, 0);
+}
+
+.footer-text p {
+    padding-bottom: 15px;
+}
+
+.footer-img {
+    width: 50%;
+    height: 30%;
+    object-fit: cover;
+}
+
+.footer-mxh-img {
+    display: flex;
+    padding-top: 10px;
+}
+
+.footer-mxh-img img {
+    height: 30px;
+}
+
+
+/* form crud product */
+#formmang {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+#formmang label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+#formmang input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+#formmang button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#formmang button:hover {
+    background-color: #45a049;
+}
+
+/* table san pham  */
+
+.table-crudproduct table {
+    width: 1200px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table-crudproduct th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.table-crudproduct th {
+    background-color: #f2f2f2;
+}
+
+.table-crudproduct img {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.table-crudproduct .delete-button,
+.edit-button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.table-crudproduct .delete-button {
+    background-color: #ff6666;
+    color: white;
+}
+
+.table-crudproduct .edit-button {
+    background-color: #4caf50;
+    color: white;
+}
+
+
+
+/* CHI TIET SAN PHAM - DETAILPRODUCT */
+.detailproduct {
+    width: 1380px;
+    margin: 0 auto;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+.detailproduct-title {
+    margin-bottom: 20px;
+}
+
+.detailproduct-title a {
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.detailproduct-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.detailproduct-img img {
+    width: 600px;
+    height: 500px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.detailproduct-img:hover img {
+    transform: scale(1.05);
+    /* Phóng to ảnh khi hover */
+}
+
+.detailproduct-content-title {
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.detailproduct-content-price {
+    color: #FF594F;
+    font-size: 2.6rem;
+    font-weight: 800;
+    margin: 10px 0px 10px 0px;
+}
+
+.detailproduct-content-text {
+    line-height: 30px;
+}
+
+.detailproduct-content-text-delivery {
+    display: flex;
+    margin-top: 20px;
+}
+
+.detailproduct-content-text-delivery img {
+    margin-right: 10px;
+}
+
+.counter-container {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.counter-button {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    border: 0px solid #ccc;
+    background-color: #f0f0f0;
+    font-weight: 800;
+}
+
+.counter-input {
+    font-weight: 800;
+    font-size: 1rem;
+    padding: 0.5rem;
+    background-color: #f0f0f0;
+    text-align: center;
+    width: 30px;
+    border: 0px solid #ccc;
+}
+
+.detailproduct-button {
+    display: flex;
+    margin-top: 50px;
+
+}
+
+.detailproduct-wishlist button {
+    background-color: #f0f0f0;
+    width: 75px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.detailproduct-wishlist-button img {
+    display: flex;
+    align-items: center;
+    margin-left: 22px;
+}
+
+.detailproduct-addtocart {
+    margin-left: 15px;
+}
+
+.detailproduct-addtocart button:hover {
+    background-color: #DA5F5B;
+    transition: 0.7s ease;
+}
+
+.detailproduct-addtocart button {
+    background-color: black;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 50px;
+}
+
+/* detailproduct-bottom */
+.detailproduct-bottom {
+    width: 1380px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.detailproduct-bottom-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.detailproduct-bottom-box-left {
+    display: flex;
+    justify-content: space-between;
+}
+
+.detailproduct-bottom-box-left img {
+    width: 130px;
+    height: 130px;
+}
+
+.detailproduct-policy-title {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.detailproduct-bottom-box-right hr {
+    border: none;
+    height: 1px;
+    background-color: #c9c9c9;
+}
+
+
+.detailproduct-policy-title-box {
+    display: flex;
+    margin-top: 20px;
+}
+
+.detailproduct-policy-title-box img {
+    width: 35px;
+    margin-right: 10px;
+}
+
+.detailproduct-policy-title-box h3 {
+    font-size: 1rem;
+    margin-top: 10px;
+    font-weight: 800;
+}
+
+.detailproduct-policy-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.detailproduct-policy-content-box p {
+    line-height: 1.2rem;
+    font-size: 0.8rem;
+}
+
+
+
+/* WARRANTYPOLICY - chinh sach bao hanh */
+.detailproduct-warrantypolicy {
+    width: 1380px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.detailproduct-warrantypolicy-box {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.warrantypolicy-title {
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+/* .warrantypolicy-title:hover{
+    color: rgb(0, 195, 255);
+    transition: 0.6s ease;
+} */
+.warrantypolicy-title h3 {
+    font-size: 1.2rem;
+    color: #81C8C2;
+    font-weight: 800;
+    padding-bottom: 10px;
+    border-bottom: 2.5px solid #81C8C2;
+    width: 90px;
+}
+
+.warrantypolicy-content p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: rgb(37, 37, 37);
+    line-height: 1.3rem;
+}
+
+/* REGISTER - DANG KY */
+.register {
+    width: 1050px;
+    margin: 0 auto;
+    margin-top: 250px;
+}
+
+.register-box {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 20px;
+    margin-bottom: 150px;
+}
+
+.register-left-img img {
+    width: 900px;
+    object-fit: cover;
+    height: 500px;
+    border-radius: 25px;
+    margin-top: 50px;
+
+}
+
+.register-right-title {
+    text-align: center;
+}
+
+.register-right-title h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    padding-bottom: 15px;
+}
+
+.register-right-title p {
+    width: 450px;
+    font-size: 1.1rem;
+    padding-bottom: 15px;
+}
+
+.register-right-input {
+    text-align: center;
+}
+
+.register-right-input input {
+    width: 500px;
+    height: 45px;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 9px;
+}
+
+.register-right-policy a {
+    text-decoration: none;
+}
+
+.register-right-policy span a {
+    color: red;
+}
+
+.register-right-button {
+  margin-bottom: 15px;
+}
+
+.register-right-button input {
+    width: 500px;
+    background-color: #81C8C2;
+    color: white;
+    font-weight: 800;
+    height: 50px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.register-right-button input:hover {
+    background-color: #ff6666;
+}
+
+.register-right-or {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
+.register-right-button-facebook button {
+    width: 500px;
+    background-color: #039BE5;
+    color: white;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.register-right-button-facebook img {
+    padding-top: 1px;
+    padding-left: 10px;
+    height: 35px;
+    width: 45px;
+}
+
+.register-facebook {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.register-facebook p {
+    margin-left: 110px;
+}
+
+.register-facebook span {
+    font-weight: 800;
+}
+
+.register-right-if {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.register-right-if p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.register-right-if a {
+    color: #81C8C2;
+}
+
+
+/* CUSTOMER - khach hang */
+.customer {
+    width: 1380px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.customer-img {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 1150px;
+    gap: 50px;
+    margin: 0 auto;
+}
+
+.customer-img img {
+    height: 400px;
+    width: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.customer-img-main h3 {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 800;
+    color: #81C8C2;
+    font-size: 1.5rem;
+}
+
+
+/* input - qlsp */
+.input-qlsp {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* slide show */
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.mySlides {
+    display: none;
+    transition: opacity 1s ease-in-out;
+    /* Hiệu ứng chuyển đổi */
+}
+
+.fade {
+    opacity: 1;
+}
+
+.dot-container {
+    text-align: center;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 1s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+
+/* CART - gio hang */
+.cart {
+    width: 1380px;
+    margin: 0 auto;
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+
+.cart-box-title {
+    font-weight: 800;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.cart table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.cart-box-table img {
+    width: 150px;
+    margin-left: 120px;
+}
+
+.cart th,
+td {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+.cart th {
+    background-color: #f2f2f2;
+}
+
+.cart .delete-button {
+    background-color: #ff6666;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+
+/* login - dang nhap */
+.login {
+    width: 1050px;
+    margin: 0 auto;
+    margin-top: 250px;
+}
+
+.login-box {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 20px;
+    margin-bottom: 150px;
+}
+
+.login-left-img img {
+    width: 900px;
+    object-fit: cover;
+    height: 500px;
+    margin-top: 50px;
+
+}
+
+.login-right-title {
+    text-align: center;
+
+}
+
+.login-right-title h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    padding-bottom: 15px;
+}
+
+.login-right-title p {
+    width: 450px;
+    font-size: 1.1rem;
+    padding-bottom: 15px;
+}
+
+.login-right-input {
+    text-align: center;
+}
+
+.login-right-input-nickname h2 {
+    text-align: left;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.login-right-input-password h2 {
+    text-align: left;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.login-right-input-nickname span {
+    color: red;
+}
+
+.login-right-input-password span {
+    color: red;
+}
+
+.login-right-input input {
+    width: 500px;
+    height: 45px;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+.login-right-policy {
+    font-size: 1.1rem;
+}
+
+.login-right-policy input {
+    margin-right: 10px;
+}
+
+.login-right-policy span a {
+    color: red;
+}
+
+.login-right-button {
+    margin-top: 25px;
+}
+
+.login-right-button button {
+    width: 500px;
+    background-color: #81C8C2;
+    color: white;
+    font-weight: 800;
+    height: 50px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.login-right-button button:hover {
+    background-color: #ff6666;
+}
+
+.login-right-or {
+    text-align: left;
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
+.login-right-or a {
+    text-decoration: none;
+    color: black;
+}
+
+.login-right-or a:hover {
+    transition: 0.7s ease;
+    color: red;
+}
+
+.login-right-button-facebook button {
+    width: 500px;
+    background-color: #039BE5;
+    color: white;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.login-right-button-facebook img {
+    padding-top: 1px;
+    padding-left: 10px;
+    height: 35px;
+    width: 45px;
+}
+
+.login-facebook {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.login-facebook p {
+    margin-left: 110px;
+}
+
+.login-facebook span {
+    font-weight: 800;
+}
+
+.login-right-if {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-right-if p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.login-right-if a {
+    color: #81C8C2;
+}
+
+
+/* cart - total */
+.cart-total {
+    margin-top: 50px;
+
+}
+
+.cart-total-title {
+    text-align: right;
+
+}
+
+.cart-total-title h2 {
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.cart-total-title span {
+    font-weight: 100;
+}
+
+.cart-total-shipping {
+    text-align: right;
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+.cart-total-shipping h2 {
+    font-weight: 800;
+}
+
+.cart-total-shipping span {
+    font-weight: 100;
+}
+
+.cart-total-price {
+    font-weight: 800;
+
+    text-align: right;
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+.cart-total-price span {
+    color: red;
+
+}
+
+
+
+/* products-banner */
+.products-banner-container {
+    margin: 0 auto;
+    position: relative;
+}
+
+.products-banner-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.products-banner-text {
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    transform: translate(-70%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.products-banner-title {
+    font-size: 3rem;
+}
+
+.products-banner-content {
+    font-size: 0.9rem;
+    text-align: left;
+    margin-top: 50px;
+
+}
+
+
+/* PRODUCTS */
+.products-container {
+    width: 1380px;
+    margin: 0 auto;
+}
+
+.products-container-main {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    gap: 20px;
+    padding-top: 30px;
+}
+
+.products-container-categories {
+    border: 0.3px solid rgb(242, 242, 242);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.products-categories-title {
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: rgb(125, 207, 209);
+
+}
+
+.products-categories-content-text a {
+    text-decoration: none;
+}
+
+.products-categories-content-text {
+    padding-left: 17px;
+    line-height: 30px;
+}
+
+.products-categories-content-text li {
+    color: rgb(147, 156, 45);
+}
+
+.products-categories-content-text h3 {
+    color: black;
+}
+
+.products-categories-content-img img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+
+/* PRODUCTS */
+
+.products {
+    border-radius: 35px;
+    width: 1380px;
+    margin: 0 auto;
+    background-color: #9fe4df;
+}
+
+.products-box-main {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.products-box-area {
+    border-radius: 20px;
+    background-color: white;
+    height: 350px;
+}
+
+.products-title {
+    display: flex;
+    justify-content: center;
+    font-weight: 800;
+    margin-top: 20px;
+}
+
+.products-price {
+    display: flex;
+    margin-top: 8px;
+    justify-content: center;
+}
+
+.products-box-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.products-box-title h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #9fe4df;
+}
+
+
+/* HE THONG CUA HANG */
+.store-container {
+    width: 1380px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.store-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.store-box-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.store-box-content {
+    margin-top: 20px;
+}
+
+.store-box-img img {
+    margin-top: 10px;
+    width: 500px;
+    height: 350px;
+    object-fit: cover;
+    background-color: #039BE5;
+}
+
+
+/* Hanh trinh tu te - blog HTTT */
+.HTTT {
+    background-image: url(../assets/images/background_HTTT.jpeg);
+    height: 850px;
+    width: 100%;
+    background-size: cover;
+}
+
+.HTTT-box {
+    width: 1380px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.HTTT-box-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.HTTT-box-header-left img {
+    width: 210px;
+    height: 130px;
+    object-fit: cover;
+}
+
+.HTTT-box-header-right-content {
+    border: 2px solid white;
+    border-radius: 40px;
+    color: white;
+    font-weight: 800;
+    font-size: 1rem;
+    margin-top: 60px;
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.259);
+    backdrop-filter: blur(5px);
+
+}
+
+.HTTT-box-header-right a {
+    text-decoration: none;
+}
+
+.HTTT-box-header-right-content h3 {
+    display: flex;
+    justify-content: center;
+}
+
+.HTTT-box-footer-main {
+    margin-top: 50px;
+    border: 10px solid rgba(240, 240, 240, 0.66);
+    border-radius: 30px;
+    color: white;
+}
+
+.HTTT-box-footer-main-grid {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.HTTT-box-footer-left-top {
+    backdrop-filter: blur(2px);
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.347);
+    border-left: 1px solid white;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.HTTT-box-footer-left-title {
+    padding: 10px;
+    background-color: rgba(227, 227, 227, 0.492);
+    border-radius: 15px;
+    width: 340px;
+    backdrop-filter: blur(5px);
+
+}
+
+.HTTT-box-footer-left-title h2 {
+    font-weight: 800;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+}
+
+.HTTT-box-footer-left-content p {
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin: 10px 0px 10px 0px;
+}
+
+.HTTT-box-footer-left-bot {
+    backdrop-filter: blur(2px);
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.347);
+    border-left: 1px solid white;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.HTTT-box-footer-left-bot-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    gap: 30px;
+}
+
+.HTTT-box-footer-left-bot-title h2 {
+    font-weight: 800;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+}
+
+.HTTT-box-footer-left-bot-content p {
+    font-weight: 800;
+    font-size: 1rem;
+    margin: 10px 0px 10px 0px;
+}
+
+.HTTT-box-footer-right img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+
+}
+/* danh sánh category */
+.addcategory-admin{
+  margin: 0 auto;
+  width: 1380px;
+}
+.addcategory-admin h1{
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding-bottom: 30px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
+}
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+.action-buttons button {
+  padding: 5px 10px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+.edit-button {
+  background-color: #4CAF50;
+}
+.delete-button {
+  background-color: #f44336;
+}
+.add-button {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  margin-top: 30px;
+  background-color: #81C8C2;
+  color: white;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  width: 170px;
+}
+.add-button a{
+  text-decoration: none;
+  color: black;
+
+}
+/* quản lí - thêm sản phẩm */
+
+#category-add{
+  padding-top: 50px;
+  width: 1380px;
+  margin: 0 auto;
+}
+#category-add form{
+  border: 1px solid rgb(210, 210, 210);
+  padding: 50px;
+  border-radius: 20px;
+}
+#category-add h3{
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.form-group input{
+  padding: 5px;
+  width: 300px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+.form-group button{
+  background-color: #81C8C2;
+  padding: 5px;
+  width: 150px;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.register input{
+  width: 450px;
+}
+
+
+
+/* dropdown products page */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+ .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+ .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+ .dropdown-content a:hover {background-color: #f1f1f1;}
+
+ .dropdown-content.show {display: block;}

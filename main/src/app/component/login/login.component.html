@@ -1,0 +1,95 @@
+<div class="login">
+  <div id="error-message"></div>
+
+  <div class="login-box">
+      <div class="login-left">
+          <div class="login-left-img">
+              <img src="../assets/images/dangnhap.jpg" alt="">
+          </div>
+      </div>
+      <div class="login-right">
+          <div class="login-right-title">
+              <h2>Đăng nhập</h2>
+              <p>Hãy đăng nhập để được hưởng đặc quyền riêng dành cho bạn</p>
+          </div>
+          <form (ngSubmit)="onLogin()" [formGroup]="loginForm">
+              <div class="login-right-input">
+                  <div class="login-right-input-nickname">
+                      <h2>Tài khoản <span>*</span></h2>
+                      <input type="text" name="name" id="name" formControlName="name" [(ngModel)]="user.name" class="form-control"  placeholder="Nhập nickname ..." aria-describedby="idHelpId">
+                      <small *ngIf="!loginForm.get('name')?.valid && loginForm.get('name')?.touched" id="idHelpId" class="text-muted">Username is required</small>
+                  </div>
+                  <div class="login-right-input-password">
+                      <h2>Mật khẩu<span>*</span></h2>
+                      <input type="password" name="password" id="password" formControlName="password" [(ngModel)]="user.password" class="form-control"  placeholder="Nhập mật khẩu ..." aria-describedby="nameHelpName">
+                      <small *ngIf="!loginForm.get('password')?.valid && loginForm.get('password')?.touched" id="nameHelpName" class="text-muted">Password is required</small>
+                  </div>
+                  <div class="form-group">
+                    <button class="btn btn-primary">Login</button>
+                  </div>
+              </div>
+              <div class="login-right-policy">
+                  <input type="radio">Lưu tài khoản
+              </div>
+          </form>
+
+          <div class="login-right-or">
+              <a href="forgetpass.html">
+                  <p>Quên mật khẩu?</p>
+              </a>
+          </div>
+          <div class="login-right-button-facebook">
+              <button type="submit" class="login-facebook"><img src="../assets/images/facebookregister.png" alt="">
+                  <p> Đăng nhập bằng <span>Facebook</span> </p>
+              </button>
+          </div>
+          <div class="login-right-if">
+              <p>Bạn chưa có tài khoản Anna?</p>
+              <a [routerLink]="['/register']" routerLinkActive="router-link-active" >Đăng ký ngay</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- policy -->
+<div class="policy">
+  <div class="policy-box">
+      <div class="policy-logo">
+          <img src="../assets//images/policylogo.svg" alt="">
+      </div>
+      <div class="policy-main">
+          <div class="policy-main-box">
+              <div class="policy-main-logo">
+                  <img src="../assets/images/icons8-shield-64.png" alt="">
+              </div>
+              <div class="policy-main-text">
+                  <h3>Chính sách bảo hành</h3>
+              </div>
+          </div>
+          <div class="policy-main-box">
+              <div class="policy-main-logo">
+                  <img src="../assets/images/icons8-eye-24.png" alt="">
+              </div>
+              <div class="policy-main-text">
+                  <h3>Khám mắt miễn phí</h3>
+              </div>
+          </div>
+          <div class="policy-main-box">
+              <div class="policy-main-logo">
+                  <img src="../assets/images/icons8-refresh-30.png" alt="">
+              </div>
+              <div class="policy-main-text">
+                  <h3>Thu cũ đổi mới</h3>
+              </div>
+          </div>
+          <div class="policy-main-box">
+              <div class="policy-main-logo">
+                  <img src="../assets/images/icons8-clean-24.png" alt="">
+              </div>
+              <div class="policy-main-text">
+                  <h3>Vệ sinh kính mắt</h3>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

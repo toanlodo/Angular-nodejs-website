@@ -1,0 +1,148 @@
+<div class="detailproduct">
+  <div class="detailproduct-title">
+      <a href="">Trang chủ</a> =>
+      <a href="">Sản phẩm</a>
+  </div>
+  <div class="detailproduct-box" id="productdetail">
+    <div class="detailproduct-img" >
+      <img [src]="product.image" alt="">
+    </div>
+    <div class="detailproduct-content" id="">
+      <div class="detailproduct-content-title">
+          <h3>{{product.name}}</h3>
+      </div>
+      <div class="detailproduct-content-price">
+          <h2>{{product.price | currency:'VND':'symbol' }}</h2>
+      </div>
+      <div class="detailproduct-content-text">
+          <p>Mã sản phẩm: 380CK051</p>
+          <p>Chất liệu: Kim loại titan</p>
+          <p>Mô tả: {{product.desc}}</p>
+          <p>Màu sắc: Đen vàng, đen, đen ghi, đen trắng</p>
+          <div class="detailproduct-content-text-delivery">
+              <img src="assets/images/icons8-delivery-32.png" alt="">
+              <p>Miễn phí giao hàng từ 500k ( vận chuyển 3 - 5 ngày )</p>
+          </div>
+          <div class="counter-container">
+              <div class="counter-button">-</div>
+              <input type="text" class="counter-input">
+              <div class="counter-button">+</div>
+          </div>
+          <div class="detailproduct-button">
+              <div class="detailproduct-wishlist">
+                  <button class="detailproduct-wishlist-button"> <img src="assets/images/icons8-heart-32.png"
+                          alt=""></button>
+              </div>
+              <div class="detailproduct-addtocart">
+                  <button >Thêm vào giỏ hàng</button>
+              </div>
+          </div>
+
+      </div>
+    </div>  </div>
+</div>
+
+<div class="detailproduct-bottom">
+  <div class="detailproduct-bottom-box">
+      <div class="detailproduct-bottom-box-left">
+      </div>
+      <div class="detailproduct-bottom-box-right">
+          <hr>
+          <div class="detailproduct-policy">
+              <div class="detailproduct-policy-title">
+                  <div class="detailproduct-policy-title-box">
+                      <img src="assets/images/icons8-box-50.png" alt="">
+                      <h3>Bảo hành trọn đời</h3>
+                  </div>
+                  <div class="detailproduct-policy-title-box">
+                      <img src="assets/images/icons8-deliver-64.png" alt="">
+                      <h3>Giao hàng tận nơi</h3>
+                  </div>
+                  <div class="detailproduct-policy-title-box">
+                      <img src="assets/images/icons8-holding-box-50.png" alt="">
+                      <h3>Đổi trả dễ dàng</h3>
+                  </div>
+              </div>
+              <div class="detailproduct-policy-content">
+                  <div class="detailproduct-policy-content-box">
+                      <p>Bảo hành ốc vít rơi ra, gọng lệch, gọng kênh vênh, lỏng chật, rơi ve đệm mũi trọn đời.
+                      </p>
+                  </div>
+                  <div class="detailproduct-policy-content-box">
+                      <p>Giao hàng tận nơi, được kiểm tra hàng trước khi thanh toán</p>
+                  </div>
+                  <div class="detailproduct-policy-content-box">
+                      <p>Bảo hành 1 đổi 1 khi có lỗi của nhà sản xuất, lỗi do đo mắt sai (trong 10 ngày đầu), hỗ
+                          trợ giảm 50% nếu đổi gọng mới</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- chinh sach bao hanh // warrantypolicy -->
+<div class="detailproduct-warrantypolicy">
+  <div class="detailproduct-warrantypolicy-box">
+      <div class="detailproduct-warrantypolicy-left">
+          <div class="warrantypolicy-title">
+              <h3>Thông tin</h3>
+          </div>
+          <div class="warrantypolicy-content">
+              <p>Chịu trách nhiệm sản phẩm: Công Ty TNHH Dịch vụ và Thương mại Anna Việt Nam</p>
+              <p>Cảnh báo: Bảo quản trong hộp kính</p>
+              <p>Hướng dẫn sử dụng:</p>
+              <p>+ Tháo kính bằng 2 tay</p>
+              <p>+ Không bỏ kính vào cốp xe hoặc những nơi có nhiệt độ cao làm biến dạng kính.</p>
+              <p>+ Không bỏ kính vào túi sách nếu không có hộp kính, vật dụng nhọn như chìa khóa sẽ làm xước kính.
+              </p>
+              <p>+ Không rửa kính lau kính bằng các chất có tính tẩy rửa mạnh làm bong tróc lớp váng phủ</p>
+          </div>
+      </div>
+      <div class="detailproduct-warrantypolicy-right">
+          <img src="assets/images/warrantypolicyimg.jpg" alt="">
+      </div>
+  </div>
+</div>
+<!-- POLICY -->
+<div class="policy">
+  <div class="policy-box">
+    <div class="policy-logo">
+      <img src="../assets/images/policylogo.svg" alt="">
+    </div>
+    <div class="policy-main">
+      <div class="policy-main-box">
+        <div class="policy-main-logo">
+          <img src="../assets/images/icons8-shield-64.png" alt="">
+        </div>
+        <div class="policy-main-text">
+          <h3>Chính sách bảo hành</h3>
+        </div>
+      </div>
+      <div class="policy-main-box">
+        <div class="policy-main-logo">
+          <img src="../assets/images/icons8-eye-24.png" alt="">
+        </div>
+        <div class="policy-main-text">
+          <h3>Khám mắt miễn phí</h3>
+        </div>
+      </div>
+      <div class="policy-main-box">
+        <div class="policy-main-logo">
+          <img src="../assets/images/icons8-refresh-30.png" alt="">
+        </div>
+        <div class="policy-main-text">
+          <h3>Thu cũ đổi mới</h3>
+        </div>
+      </div>
+      <div class="policy-main-box">
+        <div class="policy-main-logo">
+          <img src="../assets/images/icons8-clean-24.png" alt="">
+        </div>
+        <div class="policy-main-text">
+          <h3>Vệ sinh kính mắt</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

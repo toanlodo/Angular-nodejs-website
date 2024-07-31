@@ -1,0 +1,375 @@
+<body>
+  <!-- BANNER -->
+  <div class="banner">
+    <div class="banner-box">
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="../assets/images/banner1.jpg" alt="Banner 1">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="../assets/images/banner2.png" alt="Banner 2">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="../assets/images/banner3.jpg" alt="Banner 3">
+        </div>
+
+        <!-- Navigation dots -->
+        <div class="dot-container">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="morebanner">
+    <div class="morebanner-box">
+      <div class="morebanner-left">
+        <img src="../assets/images/moreabanner1.jpg" alt="">
+      </div>
+      <div class="morebanner-middle">
+        <img src="../assets/images/morebanner4.jpg" alt="" id="middleImage">
+      </div>
+      <div class="morebanner-right">
+        <img src="../assets/images/morebanner5.jpg" alt="" id="rightImage">
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCT NEW -->
+
+  <div class="product">
+    <div class="product-area">
+      <div class="product-box-header">
+        <div class="product-box-title">
+          <h3>Sản phẩm mới</h3>
+        </div>
+        <div class="product-box-details">
+          <h4>Hàng trăm sản phẩm bắt trend mới nhất</h4>
+        </div>
+      </div>
+      <div class="product-box-main" id="newproducts" >
+        <div class="product-box" *ngFor="let product of products">
+          <div class="product-box-index" >
+            <!-- products -->
+            <div class="product-box-area" >
+              <a [routerLink]="['/product-detail/' + product._id]" routerLinkActive="router-link-active" >
+                <div class="product-img">
+                  <img [src]="product.image" alt="">
+                </div>
+              </a>
+              <div class="product-title">
+                <h3>
+                  {{product.name}}
+                </h3>
+              </div>
+              <div class="product-price">
+                <h4>
+                  {{product.price | currency:'VND':'symbol' }}
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- blog -->
+  <div class="blog">
+    <div class="blog-box">
+      <div class="blog-header">
+        <div class="blog-title">
+          <h3>CHỌN KÍNH ONLINE</h3>
+          <h2>TÌM KÍNH PHÙ HỢP</h2>
+        </div>
+      </div>
+      <div class="blog-main">
+        <div class="blog-img">
+          <img src="../assets/images/blog1.jpg" alt="">
+        </div>
+        <div class="blog-details">
+          <div class="blog-details-title">
+            <h1>Kích thước khung</h1>
+            <h2>Lựa chọn Kích thước khung phù hợp nhất để giúp dễ dàng vừa vặn, thoải mái và tiện lợi cho
+              bạn.</h2>
+            <a href="">Cách đo kích thước khung hình của bạn</a>
+          </div>
+        </div>
+      </div>
+      <div class="blog-main">
+
+        <div class="blog-details">
+
+          <div class="blog-details-title">
+            <h1>Đo ống kính</h1>
+            <h2>Chúng tôi sẽ giới thiệu các loại ống kính tốt nhất dựa trên đơn thuốc của bạn. Để đặt mua
+              kính, bạn cũng
+              sẽ cần Khoảng cách đồng tử (PD).</h2>
+            <a href="">Cách đo kích thước PD của bạn</a>
+          </div>
+        </div>
+        <div class="blog-img">
+          <img src="../assets/images/blog2.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCT - HOT -->
+  <div class="product">
+    <div class="product-area">
+      <div class="product-box-header">
+        <div class="product-box-title">
+          <h3>Sản phẩm HOT</h3>
+        </div>
+        <div class="product-box-details">
+          <h4>Hàng trăm sản phẩm bắt trend mới nhất</h4>
+        </div>
+      </div>
+      <div class="product-box-main" id="hotproducts">
+
+      </div>
+    </div>
+  </div>
+
+  <!-- blog - store -->
+  <div class="blog">
+    <div class="blog-box">
+      <div class="blog-header">
+        <div class="blog-title">
+          <h3>ĐỊA ĐIỂM</h3>
+          <h2>HỆ THỐNG CỬA HÀNG</h2>
+        </div>
+      </div>
+      <div class="blog-main2">
+        <div class="blog-img2">
+          <img src="../assets/images/BLOG3.png" alt="">
+        </div>
+        <div class="blog-img2">
+          <img src="../assets/images/blog4.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="blog">
+    <div class="blog-box3">
+      <div class="blog-header3">
+        <div class="blog-title">
+          <h2>VŨ TRỤ TRUYỀN THÔNG</h2>
+        </div>
+        <div class="blog-details3">
+          <p>Kính mắt Anna chắc không còn quá xa lạ với giới trẻ nữa. Đây là kênh thông tin mua sắm và giải
+            trí dành cho
+            giới trẻ, là “món ăn tinh thần” hằng ngày không thể thiếu của mỗi người trẻ.</p>
+          <br>
+          <p>Được thành lập từ năm 2015, trải qua hơn 8 năm phát triển kính mắt Anna đã, đang và sẽ chiếm vị
+            trí không
+            thể thiếu đối với các bạn trẻ. Cập nhật thông tin thời trang nhanh chóng và phù hợp với thị hiếu
+            của khán
+            giả thông qua các mạng xã hội như Facebook, Tiktok, Instagram, Youtube, kính mắt Anna là lựa
+            chọn hàng đầu
+            cho những ai muốn tận hưởng các bài viết, video vừa mang tính giải trí mà vẫn có đầy đủ thông
+            tin cần thiết
+          </p>
+        </div>
+      </div>
+      <div class="blog-middle">
+        <a href="">
+          <div class="blog-middle-logo">
+
+          </div>
+          <div class="blog-middle-text">
+            <h3>ANNA</h3>
+            <p>kinhmatanna</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-end">
+        <a href="">
+          <div class="blog-end1">
+            <div class="blog-end-logo">
+              <img src="../assets/images/icons8-instagram-50.png" alt="">
+            </div>
+            <div class="blog-end-text">
+              <h3>ANNA</h3>
+              <p>kinhmatanna</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="">
+          <div class="blog-end2">
+            <div class="blog-end-logo">
+              <img src="../assets/images/icons8-tiktok-50.png" alt="">
+            </div>
+            <div class="blog-end-text">
+              <h3>ANNA</h3>
+              <p>kinhmatanna</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- KHACH HANG THAN YEU -->
+  <div class="customer">
+    <div class="customer-box">
+      <div class="customer-title">
+        <div class="blog-header">
+          <div class="blog-title">
+            <h3>TÌNH THƯƠNG MẾN THƯƠNG</h3>
+            <h2>KHÁCH HÀNG THÂN YÊU</h2>
+          </div>
+        </div>
+      </div>
+      <div class="customer-img">
+        <div class="customer-img-main">
+          <img src="../assets/images/tranvan.webp" alt="">
+          <h3>Trần Vân</h3>
+        </div>
+        <div class="customer-img-main">
+          <img src="../assets/images/baoan.jpg" alt="">
+          <h3>Bảo Ân & Gia Khiêm</h3>
+
+        </div>
+        <div class="customer-img-main">
+          <img src="../assets/images/tramanh.jpg" alt="">
+          <h3>Trâm Anh</h3>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- HANH TRINH TU TE -->
+  <div class="HTTT">
+    <div class="HTTT-box">
+      <div class="HTTT-box-header">
+        <div class="HTTT-box-header-left">
+          <img src="../assets/images/Logo_HTTT.png" alt="">
+        </div>
+        <div class="HTTT-box-header-right">
+          <a href="">
+            <div class="HTTT-box-header-right-content">
+              <h3>Cộng đồng sống tử tế</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="HTTT-box-footer">
+        <div class="HTTT-box-footer-main">
+          <div class="HTTT-box-footer-main-grid">
+            <div class="HTTT-box-footer-left">
+              <div class="HTTT-box-footer-left-top">
+                <div class="HTTT-box-footer-left-title">
+                  <h2>Đôi mắt mặt trời</h2>
+                </div>
+                <div class="HTTT-box-footer-left-content">
+                  <p>Tài trợ các ca mổ mắt dị tật bẩm sinh cho các em nhỏ có hoàn cảnh khó khăn.</p>
+                </div>
+                <div class="HTTT-box-footer-left-title">
+                  <h2>TÚI TỬ TẾ ANNA</h2>
+                </div>
+
+                <div class="HTTT-box-footer-left-content">
+                  <p>Tài trợ các ca mổ mắt dị tật bẩm sinh cho các em nhỏ có hoàn cảnh khó khăn.</p>
+                </div>
+              </div>
+              <div class="HTTT-box-footer-left-bot">
+                <div class="HTTT-box-footer-left-bot-grid">
+                  <div class="HTTT-box-footer-bot-grid-main">
+                    <div class="HTTT-box-footer-left-bot-title">
+                      <h2>07</h2>
+                    </div>
+                    <div class="HTTT-box-footer-left-bot-content">
+                      <p>TỈNH THÀNH</p>
+                    </div>
+                    <div class="HTTT-box-footer-left-bot-content">
+                      <p>Hành trình tử tế có mặt</p>
+                    </div>
+                  </div>
+                  <div class="HTTT-box-footer-bot-grid-main">
+                    <div class="HTTT-box-footer-left-bot-title">
+                      <h2>30</h2>
+                    </div>
+                    <div class="HTTT-box-footer-left-bot-content">
+                      <p>EM NHỎ</p>
+                    </div>
+                    <div class="HTTT-box-footer-left-bot-content">
+                      <p>Được tài trợ chi phí phẫu thuật mắt</p>
+                    </div>
+                  </div>
+                  <div class="HTTT-box-footer-bot-grid-main">
+                    <div class="HTTT-box-footer-left-bot-title">
+                      <h2>500.000</h2>
+                    </div>
+                    <div class="HTTT-box-footer-left-bot-content">
+                      <p>TÚI TỬ TẾ</p>
+                    </div>
+                    <div class="HTTT-box-footer-left-bot-content">
+                      <p>Được phát tặng để tìm người thân thất lạc</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="HTTT-box-footer-right">
+              <a href=""><img src="../assets/images/tuituteduanimg.jpeg" alt=""></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- POLICY -->
+  <div class="policy">
+    <div class="policy-box">
+      <div class="policy-logo">
+        <img src="../assets/images/policylogo.svg" alt="">
+      </div>
+      <div class="policy-main">
+        <div class="policy-main-box">
+          <div class="policy-main-logo">
+            <img src="../assets/images/icons8-shield-64.png" alt="">
+          </div>
+          <div class="policy-main-text">
+            <h3>Chính sách bảo hành</h3>
+          </div>
+        </div>
+        <div class="policy-main-box">
+          <div class="policy-main-logo">
+            <img src="../assets/images/icons8-eye-24.png" alt="">
+          </div>
+          <div class="policy-main-text">
+            <h3>Khám mắt miễn phí</h3>
+          </div>
+        </div>
+        <div class="policy-main-box">
+          <div class="policy-main-logo">
+            <img src="../assets/images/icons8-refresh-30.png" alt="">
+          </div>
+          <div class="policy-main-text">
+            <h3>Thu cũ đổi mới</h3>
+          </div>
+        </div>
+        <div class="policy-main-box">
+          <div class="policy-main-logo">
+            <img src="../assets/images/icons8-clean-24.png" alt="">
+          </div>
+          <div class="policy-main-text">
+            <h3>Vệ sinh kính mắt</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,58 @@
+
+<body>
+  <header>
+      <div class="logo">AnnaEyeWear</div>
+  </header>
+  <div class="container">
+      <aside class="sidebar">
+          <ul>
+              <li><a href="#san-pham">Sản phẩm</a></li>
+              <li><a [routerLink]="['/category-list']" routerLinkActive="router-link-active" >Danh mục</a></li>
+              <li><a [routerLink]="['/product-list']">Người dùng</a></li>
+              <li><a href="#cai-dat">Cài đặt</a></li>
+          </ul>
+      </aside>
+      <main class="content">
+        <body>
+          <div class="addcategory-admin">
+          <h1 style="padding-top: 50px;">Quản trị sản phẩm</h1>
+            <table class="Table-addcategory">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Image</th>
+                        <th>Category</th>
+                        <th>CategoryId</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of products">
+                      <td>{{product.name}}</td>
+                      <td><img width ="100px" src="{{product.image}}" alt=""></td>
+                      <td>{{product.category}}</td>
+                      <td>{{product.categoryId}}</td>
+                      <td>{{product.price}}</td>
+                      <td>{{product.desc}}</td>
+                      <td>
+                          <div class="action-buttons">
+                            <button [routerLink]="['/product-edit/' + product._id ]" class="edit-button">Edit</button>
+                            <a href="javscript:void(0)" (click)='deleteProduct(product._id)'><button  class="delete-button">Delete</button></a>
+                          </div>
+                      </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="add-button">
+              <a [routerLink]="['/product-add']" routerLinkActive="router-link-active"  routerLinkActive="router-link-active" class="AddCategoryButton">Thêm sản phẩm</a>
+            </div>
+          </div>
+        </body>
+
+      </main>
+  </div>
+</body>
+
+

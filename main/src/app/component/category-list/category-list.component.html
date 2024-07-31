@@ -1,0 +1,52 @@
+
+<body>
+  <header>
+      <div class="logo">AnnaEyeWear</div>
+  </header>
+  <div class="container">
+      <aside class="sidebar">
+          <ul>
+            <li><a [routerLink]="['/product-list']" routerLinkActive="router-link-active">Sản phẩm</a></li>
+            <li><a [routerLink]="['/category-list']" routerLinkActive="router-link-active" >Danh mục</a></li>
+              <li><a href="#nguoi-dung">Người dùng</a></li>
+              <li><a href="#cai-dat">Cài đặt</a></li>
+          </ul>
+      </aside>
+      <main class="content">
+        <div >
+          <div class="addcategory-admin">
+
+            <h1 style="padding-top: 50px;">Quản trị danh mục</h1>
+
+
+              <table class="Table-addcategory">
+                  <thead>
+                      <tr>
+                          <th>Name</th>
+                          <th>Actions</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let category of categories">
+                          <td>{{category.name}}</td>
+                          <td>
+                              <div class="action-buttons">
+                                  <button [routerLink]="['/category-edit/' + category._id ]" class="edit-button">Edit</button>
+                                  <a href="javscript:void(0)" (click)='deleteCategory(category._id)'><button  class="delete-button">Delete</button></a>
+                              </div>
+                          </td>
+                      </tr>
+
+                      <!-- Add more rows as needed -->
+                  </tbody>
+
+
+              </table>
+              <div class="add-button">
+                <a [routerLink]="['/category-add']" routerLinkActive="router-link-active" class="AddCategoryButton">Thêm danh mục</a>
+              </div>
+            </div>
+        </div>
+      </main>
+  </div>
+</body>

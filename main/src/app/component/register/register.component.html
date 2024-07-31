@@ -1,0 +1,142 @@
+<div class="register">
+  <div class="register-box">
+    <div class="register-left">
+      <div class="register-left-img">
+        <img src="../assets/images/register.jpg" alt="">
+      </div>
+    </div>
+    <div class="register-right">
+      <div class="register-right-title">
+        <h2>Đăng ký tài khoản</h2>
+        <p>Hãy đăng ký để được hưởng nhiều đặc quyền riêng dành cho bạn</p>
+      </div>
+      <div class="register-right-input">
+        <form class="border p-3 rounded" [formGroup]="registerF" (submit)="onRegister()">
+
+          <!-- Tên đăng nhập -->
+          <div class="register-right-input-nickname">
+            <!-- <input type="email" id="email" placeholder="Nhập email ..."> -->
+            <div class="form-group col-md-12">
+              <input type="text" class="form-control" formControlName="name" placeholder="Nhập tên đăng nhập của bạn...">
+              <div *ngIf="registerF.get('name')?.hasError('minlength') && registerF.get('name')?.touched">
+                <div class="text-danger">Tên đăng nhâp tối thiểu 6 ký tự.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Họ và tên -->
+          <div class="register-right-input-nickname">
+            <!-- <input type="text" id="name" placeholder="Nhập tên tài khoản ..."> -->
+            <div class="form-group col-md-12">
+              <input type="text" class="form-control" formControlName="fullname" placeholder="Nhập họ và tên của bạn...">
+              <div *ngIf="registerF.get('fullname')?.hasError('forbiddenWords') && registerF.get('fullname')?.touched">
+                <div class="text-danger">Họ Và Tên không được chứa từ 'ma tuý' hoặc 'hàng trắng'.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="register-right-input-nickname">
+            <!-- <input type="text" id="name" placeholder="Nhập tên tài khoản ..."> -->
+            <div class="form-group">
+              <input type="text" class="form-control" formControlName="email" placeholder="Nhập email của bạn...">
+              <div *ngIf="registerF.get('email')?.hasError('email') && registerF.get('email')?.touched">
+                <div class="text-danger alert-dismissible fade show" role="alert">
+                  <strong>Email </strong> không hợp lệ
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- password -->
+          <div class="form-group">
+            <input type="password" class="form-control" formControlName="password" id="password" placeholder="Nhập mật khẩu ...">
+          </div>
+          <!-- repassword -->
+          <div class="form-group register-right-input-confirmpassword">
+            <input type="password"  class="form-control" formControlName="rePassword" id="confirmPassword" placeholder="Nhập lại mật khẩu ...">
+          </div>
+
+          <!-- mat khau khong khop -->
+          <div *ngIf="registerF.hasError('mismatch') && registerF.get('rePassword')?.touched">
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              Mật khẩu không khớp.
+            </div>
+          </div>
+
+          <!-- button -->
+          <div class="form-group">
+            <!-- <input id="registerButton" type="button" value="Đăng ký ngay"> -->
+            <button id="registerButton" type="submit" class="btn btn-md full-width bg-dark text-light fs-md ft-medium">Tạo tài
+              khoản</button>
+          </div>
+
+        </form>
+
+
+      </div>
+      <div class="register-right-policy">
+        <p>Thông tin của bạn sẽ được bảo mật theo <span><a href="">chính sách riêng tư</a> </span> của chúng
+          tôi</p>
+      </div>
+      <br>
+
+
+      <div class="register-right-or">
+        <p>Hoặc</p>
+      </div>
+      <div class="register-right-button-facebook">
+        <button type="submit" class="register-facebook"><img src="../assets/images/facebookregister.png" alt="">
+          <p> Đăng nhập bằng <span>Facebook</span> </p>
+        </button>
+      </div>
+      <div class="register-right-if">
+        <p>Bạn đã có tài khoản Anna?</p>
+        <a href="/login">Đăng nhập ngay</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- policy -->
+<div class="policy">
+  <div class="policy-box">
+    <div class="policy-logo">
+      <img src="../assets/images/policylogo.svg" alt="">
+    </div>
+    <div class="policy-main">
+      <div class="policy-main-box">
+        <div class="policy-main-logo">
+          <img src="../assets/images/icons8-shield-64.png" alt="">
+        </div>
+        <div class="policy-main-text">
+          <h3>Chính sách bảo hành</h3>
+        </div>
+      </div>
+      <div class="policy-main-box">
+        <div class="policy-main-logo">
+          <img src="../assets/images/icons8-eye-24.png" alt="">
+        </div>
+        <div class="policy-main-text">
+          <h3>Khám mắt miễn phí</h3>
+        </div>
+      </div>
+      <div class="policy-main-box">
+        <div class="policy-main-logo">
+          <img src="../assets/images/icons8-refresh-30.png" alt="">
+        </div>
+        <div class="policy-main-text">
+          <h3>Thu cũ đổi mới</h3>
+        </div>
+      </div>
+      <div class="policy-main-box">
+        <div class="policy-main-logo">
+          <img src="../assets/images/icons8-clean-24.png" alt="">
+        </div>
+        <div class="policy-main-text">
+          <h3>Vệ sinh kính mắt</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

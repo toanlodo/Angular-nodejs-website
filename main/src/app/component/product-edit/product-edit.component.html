@@ -1,0 +1,77 @@
+<body>
+  <header>
+      <div class="logo">AnnaEyeWear</div>
+  </header>
+  <div class="container">
+      <aside class="sidebar">
+          <ul>
+              <li><a [routerLink]="['/product-list']" routerLinkActive="router-link-active">Sản phẩm</a></li>
+              <li><a [routerLink]="['/category-list']" routerLinkActive="router-link-active" >Danh mục</a></li>
+              <li><a >Người dùng</a></li>
+              <li><a href="#cai-dat">Cài đặt</a></li>
+          </ul>
+      </aside>
+      <main class="content">
+        <div class="col-md-10 m-auto" id="category-add">
+          <form (ngSubmit)="onSubmit()" [formGroup]="productForm">
+            <div class="card">
+              <div class="card-header">
+                <h3>Add new product</h3>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text"  style="margin-left: 60px;" name="name" id="name" formControlName="name" [(ngModel)]="product.name"
+                    class="form-control" placeholder="Tên sản phẩm cần thêm..." aria-describedby="namehelpId">
+                  <small *ngIf="!productForm.get('name')?.valid && productForm.get('name')?.touched" id="namehelpId"
+                    class="text-muted">
+                    Tên sản phẩm phải có ít nhất 6 ký tự
+                  </small>
+                  <br>
+                  <label for="price">Price</label>
+                  <input type="text" style="margin-left: 65px;" name="price" id="price" formControlName="price" [(ngModel)]="product.price"
+                    class="form-control" placeholder="Giá sản phẩm cần thêm..." aria-describedby="pricehelpId">
+                  <small *ngIf="!productForm.get('price')?.valid && productForm.get('price')?.touched" id="pricehelpId"
+                    class="text-muted">
+                    Tên sản phẩm phải có ít nhất 6 ký tự
+                  </small>
+                  <br>
+                </div>
+                <div class="form-group">
+                  <label for="desc">Description</label>
+                  <textarea type="text" name="desc" id="desc" formControlName="desc" [(ngModel)]="product.desc"
+                    class="form-control" placeholder="Mô tả sản phẩm cần thêm..." aria-describedby="deschelpId"></textarea>
+                  <small *ngIf="!productForm.get('desc')?.valid && productForm.get('desc')?.touched" id="deschelpId"
+                    class="text-muted">
+                    Tên sản phẩm phải có ít nhất 6 ký tự
+                  </small>
+                  <br>
+                </div>
+                <div class="form-group">
+                  <label for="category">Category</label>
+                  <select name="category" id="category" formControlName="category" [(ngModel)]="product.category">
+                    <option *ngFor="let category of categories" [value]="category._id">{{category.name}}</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="image">Image</label>
+                  <textarea type="text" style="margin-left:55px;" name="image" id="image" formControlName="image" [(ngModel)]="product.image"
+                    class="form-control" placeholder="Hình ảnh sản phẩm cần thêm..." aria-describedby="imagehelpId"></textarea>
+                  <small *ngIf="!productForm.get('image')?.valid && productForm.get('image')?.touched" id="imagehelpId"
+                    class="text-muted">
+                    Tên sản phẩm phải có ít nhất 6 ký tự
+                  </small>
+                  <br>
+                  <div class="form-group">
+                    <button  class="btn btn-primary">Thêm sản phẩm</button>
+                  </div>
+                </div>
+                </div>
+            </div>
+          </form>
+        </div>
+
+      </main>
+  </div>
+</body>
+
