@@ -1,0 +1,22 @@
+[{
+  "_id": {
+    "$oid": "665fc61b35fb20ad959205c5"
+  },
+  "name": "toanlodo",
+  "email": "chantoan@gmail.com",
+  "password": "$2b$10$7..k989Hjb.21P9EpOqa/eUDVef9YllKsxt7jUzCp3F9x4xBE..yK",
+  "fullname": "Lâm Chấn Toàn",
+  "admin": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66722ead5cc2fdc031649a50"
+  },
+  "name": "chantoan",
+  "email": "toan@gmail.com",
+  "password": "$2b$10$KC.ngI8/acaP.p0./OihkOFagil7c8Zan5fVCa7uXnTMShg5nrxKa",
+  "fullname": "Lâm Chấn Toàn",
+  "admin": false,
+  "__v": 0
+}]

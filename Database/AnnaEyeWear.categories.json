@@ -1,0 +1,14 @@
+[{
+  "_id": {
+    "$oid": "6643709e21e6f096fdeddf07"
+  },
+  "name": "Mắt kính tròn",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "664370af21e6f096fdeddf0d"
+  },
+  "name": "Mắt kính vuông",
+  "__v": 0
+}]

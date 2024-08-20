@@ -1,0 +1,90 @@
+[{
+  "_id": {
+    "$oid": "65f246aa3365ff1a774eaf33"
+  },
+  "name": "Mắt kính gọng vuông kim loại titan",
+  "price": 399000,
+  "hot": 0,
+  "image": "assets/images/matkinh1.jpg",
+  "desc": "Chất liệu nhựa mang lên thoải mái, chất liệu titan sang trọng",
+  "category": "Mắt kính vuông",
+  "categoryId": "664370af21e6f096fdeddf0d"
+},
+{
+  "_id": {
+    "$oid": "65f246aa3365ff1a774eaf34"
+  },
+  "id": 2,
+  "name": "Mắt kính gọng tròn viền trắng",
+  "price": 349000,
+  "categoryId": "6643709e21e6f096fdeddf07",
+  "hot": 1,
+  "image": "assets/images/matkinh3.jpg",
+  "desc": "Chất liệu nhựa mang thoải mái",
+  "category": "Mắt kính tròn"
+},
+{
+  "_id": {
+    "$oid": "65f404e603f562b07b25942d"
+  },
+  "id": 3,
+  "name": "Gọng kính gọng tròn viền vàng hoàng kim",
+  "price": 380000,
+  "categoryId": "6643709e21e6f096fdeddf07",
+  "hot": 1,
+  "desc": "Chất liệu nhựa dẻo",
+  "image": "assets/images/matkinh6.jpg",
+  "category": "Mắt kính tròn"
+},
+{
+  "_id": {
+    "$oid": "65f8ee38764e0b5602c2e6fb"
+  },
+  "id": 4,
+  "name": "Mắt kính gọng tròn mắt mèo viền đen",
+  "price": 400000,
+  "categoryId": "6643709e21e6f096fdeddf07",
+  "hot": 0,
+  "image": "assets/images/matkinh5.jpg",
+  "desc": "Mắt kính đẹp",
+  "category": "Mắt kính tròn"
+},
+{
+  "_id": {
+    "$oid": "65f8ee6c764e0b5602c2e6fc"
+  },
+  "id": 5,
+  "name": "Mắt kính gọng vuông viền nâu",
+  "price": 350000,
+  "categoryId": "664370af21e6f096fdeddf0d",
+  "hot": 1,
+  "desc": "Mắt kính đẹp cho chị em",
+  "image": "assets/images/matkinh4.jpg",
+  "category": "Mắt kính vuông"
+},
+{
+  "_id": {
+    "$oid": "65f8ee8a764e0b5602c2e6fd"
+  },
+  "id": 6,
+  "name": "Mắt kính gọng vuông trong suốt",
+  "price": 359000,
+  "categoryId": "664370af21e6f096fdeddf0d",
+  "hot": 1,
+  "desc": "Mắt kính trong suốt dễ chịu",
+  "image": "assets/images/matkinh7.jpg",
+  "category": "Mắt kính vuông"
+},
+{
+  "_id": {
+    "$oid": "65f8eeba764e0b5602c2e6fe"
+  },
+  "id": 7,
+  "name": "Mắt kính gọng vuông đen Titan nhựa",
+  "price": 289000,
+  "categoryId": "664370af21e6f096fdeddf0d",
+  "hot": 0,
+  "desc": "Mang thoải mái",
+  "image": "assets/images/matkinh8.jpg",
+  "category": "Mắt kính vuông"
+}]
