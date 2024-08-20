@@ -6,4 +6,5 @@ export class Product {
   price!:number;
   categoryId!:number;
   category!:string;
+  hot!:number;
 }

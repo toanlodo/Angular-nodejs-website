@@ -16,7 +16,7 @@ export class ProductService {
   get(id:string){
     return this.httpClient.get(`${this.url}/product/${id}`)
   }
-
+  
   getProductByCategoryId(categoryId: string) {
     return this.httpClient.get(`${this.url}/product/categoryId/${categoryId}`);
   }

@@ -46,6 +46,7 @@ const productSchema = new mongoose.Schema({
   price:Number,
   category:String,
   categoryId:String,
+  hot:Number,
 });
 const userSchema = new mongoose.Schema({
   name: String,
